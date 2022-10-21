@@ -5,6 +5,7 @@
 ## ###################################
 ## ###   High Level Instructions   ###
 ## ###################################
+
 1) Project Setup
 - Create a new github repository called react-movie-app and add the link to populi
 - Clone the repository and initialize it by running 'create-react-app .' inside the project directory and running 'npm i react-router-dom' to install react router.
@@ -28,6 +29,7 @@ export default App;
 	- ./src/Pages
 	- _Note_: These folders are going to house the react components we create for our application from now on. You do not need to strictly adhere to this folder structure for future projects, but rather treat it as a basic guideline for how to organize your project files.
 
+
 2) Creating the Base Nav Layout and Home Page
 - Create three new files
 	- ./src/Components/NavBar.js
@@ -45,6 +47,7 @@ export default App;
 	- Create a basic react component ```<HomePage/>```. 
 	- Add an h1 header that says Home Page in the JSX of ```<HomePage/>```
 
+
 3) Creating the Base Application Routes
 - _Note_: 
 	- Normally in react-router applications, the Browser Router would go in the index.js file since that is a react-router best practice. However, this makes storing and passing around top level application state difficult (such as our eventual movieList variable). If this were a real world production application, we would implement some sort of global state management library such as Redux to handle our application state (as you will do in term 3). 
@@ -57,6 +60,7 @@ export default App;
 - In ./src/Components/NavBar,
 	- Add a new ```<Link/>``` to the JSX of ```<NavBar/>``` that links to "/" with the display text of 'Home'. 
 - If you implemented the above correctly, you should be able to visit localhost:3000/ and see the Home Page and NavBar render. Additionally, inspect the page elements with chrome dev tools to verify that the Home Page elements are rendering within the Nav Layout. 
+
 
 4) Creating the Movie Layout, Movie Sidebar and Movie List Page
 - Create three new files
@@ -80,6 +84,7 @@ export default App;
 	- Add a new path to the router as a child of "/movies" set to be the index route with the element of ```<MovieListPage/>```
 - In ./src/Components/NavBar,
 	- Add a new ```<Link/>``` to the JSX of ```<NavBar/>``` that links to "/movies" with the display text of 'Movie List'. 
+
 
 5) Building Out Movie Layout and Movie Sidebar
 - In ./src/App.js,
@@ -105,6 +110,7 @@ export default App;
 				color: white;
 			}
 
+
 6) Building Out the Movie List Page
 - Create a new file ./src/Components/MovieCard.js
 - In ./src/Components/MovieCard.js,
@@ -121,6 +127,7 @@ export default App;
 	- Add css to movie-list that sets the maximum height to 80vh and the y-axis overflow to scroll.
 - If you implemented the above properly, you should now have a display that looks like Screen Shot 3. The movie list should also be vertically scrollable.
 
+
 7) Creating the Movie Page
 - Create a new file ./src/Pages/MoviePage.js 
 - In ./src/Pages/MoviePage.js,
@@ -134,6 +141,7 @@ export default App;
 		- _Hint_: Click on one of the links in the movie sidebar, that will render the Movie Page so you can console.log the above code to verify that it's working.
 	- In the JSX of ```<MoviePage/>```, display the found movie title in an h2 header, and the director, actors and plot in p tags.
 - If you implemented the above correctly, you should be able to click any one of the links in the movie sidebar, see the url change in the browser address bar and see a display that looks like screenshot 4.
+
 
 8) Creating the Movie Form Page
 - Create a new file ./src/Pages/MovieFormPage.js 
