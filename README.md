@@ -178,6 +178,7 @@ export default App;
 ## #################################
 ## ###   Expanded Instructions   ###
 ## #################################
+
 1) Project Setup
 - Create a new github repository called react-movie-app and add the link to populi
 - Clone the repository and initialize it by running 'npx create-react-app .' inside the project directory and running 'npm i react-router-dom' to install react router.
