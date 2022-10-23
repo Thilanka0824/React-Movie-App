@@ -41,6 +41,7 @@ const MovieFormPage = (props) => {
                 handleAddMovie(title, director, actors, plot)
                 console.log("Movie Added")
                 
+                
             }}>Add Movie</button>
         </div>
     )
