@@ -5,6 +5,9 @@ import NavLayout from "./Layouts/NavLayout";
 import HomePage from "./Pages/HomePage"
 import MovieListPage from "./Pages/MovieListPage";
 import MovieLayout from "./Layouts/MovieLayout";
+import MoviePage from "./Pages/MoviePage";
+import MovieFormPage from "./Pages/MovieFormPage";
+import ErrorPage from "./Components/ErrorPage";
 
 const sampleMovies =
   [
@@ -479,14 +482,27 @@ const sampleMovies =
     }
   ]
 
-
 const App = () => {
   const [movieList, setMovieList] = useState(sampleMovies)
+
+  const handleAddMovie = (Title, Director, Actors, Plot) => {
+
+    const newMovie = {
+      title: Title,
+      director: Director,
+      actors: Actors,
+      plot: Plot,
+      // createdDate: new Date().toString()
+    }
+    setMovieList([...movieList, newMovie])
+
+  }
 
   const router = createBrowserRouter([
     {
       path: '/',
       element: <NavLayout />,
+      errorElement: <ErrorPage />,
       children: [
         {
           index: true,
@@ -494,11 +510,19 @@ const App = () => {
         },
         {
           path: "/movies",
-          element: <MovieLayout movieList={movieList}/>,
+          element: <MovieLayout movieList={movieList} />,
           children: [
             {
               index: true,
-              element: <MovieListPage movieList={movieList}/>
+              element: <MovieListPage movieList={movieList} />
+            },
+            {
+              path: "/movies:title",
+              element: <MoviePage movieList={movieList} handleAddMovie={handleAddMovie} />
+            },
+            {
+              path: "form",
+              element: <MovieFormPage movieList={movieList} handleAddMovie={handleAddMovie}/>
             }
           ]
         }

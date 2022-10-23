@@ -18,18 +18,22 @@
 }
 
 .nav-layout {
-
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  margin: 10px;
 }
 
 .nav-bar {
+  background-color: black;
+  border: solid white;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 70%;
+  border-radius: 10px;
+  padding: 25px 20px 30px 20px;
 }
 
 .movie-layout {
@@ -40,11 +44,13 @@
 }
 
 .movie-sidebar {
+  background-color: #000000;
+  border: solid white;
+  border-radius: 30px;
   display: flex;
   flex-direction: column;
   margin: 10px;
-  padding-left: 20px;
-  border: solid 1px;
+  padding: 20px 20px 20px 20px;
   width: 30%;
 }
 
@@ -53,12 +59,28 @@ a {
 }
 
 .movie-list-card {
+  background-color: #000000;
   border: solid white;
-  margin: 10px;
+  border-radius: 30px;
+  margin: 20px;
   padding: 10px;
 }
 
 .movie-list {
   overflow-y: scroll;
   max-height: 80vh;
+}
+
+.input-boxes {
+  background-color: #000000;
+  border: solid white;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 20px;
+}
+
+.submit-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }

@@ -6,8 +6,8 @@ const MovieListPage = (props) => {
         <div>
             <h1>Movie List Page</h1>
             <div className="movie-list">
-                {props.movieList.map((movie)=>{
-                    return <MovieCard movie={movie}/>
+                {props.movieList.map((movie, index) => {
+                    return <MovieCard key={index} movie={movie} />
                 })}
             </div>
         </div>
