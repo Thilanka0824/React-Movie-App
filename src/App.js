@@ -8,6 +8,7 @@ import MovieLayout from "./Layouts/MovieLayout";
 import MoviePage from "./Pages/MoviePage";
 import MovieFormPage from "./Pages/MovieFormPage";
 import ErrorPage from "./Components/ErrorPage";
+import Logger from "./Components/Logger";
 
 const sampleMovies =
   [
@@ -485,13 +486,11 @@ const sampleMovies =
 const App = () => {
   const [movieList, setMovieList] = useState(sampleMovies)
 
-  const handleAddMovie = (Title, Director, Actors, Plot) => {
+  const handleAddMovie = (title) => {
 
     const newMovie = {
-      title: Title,
-      director: Director,
-      actors: Actors,
-      plot: Plot,
+      Title: title,
+      
       // createdDate: new Date().toString()
     }
     setMovieList([...movieList, newMovie])
@@ -523,7 +522,8 @@ const App = () => {
             {
               path: "form",
               element: <MovieFormPage movieList={movieList} handleAddMovie={handleAddMovie}/>
-            }
+            },
+            
           ]
         }
       ]
