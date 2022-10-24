@@ -3,6 +3,7 @@ const MovieCard = (props) => {
         <div className="movie-list-card">
             <h2>{props.movie.Title}</h2>
             <p>{props.movie.Director}</p>
+            <p>{props.movie.Actors}</p>
         </div>
     )
 }

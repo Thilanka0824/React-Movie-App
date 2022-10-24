@@ -486,10 +486,13 @@ const sampleMovies =
 const App = () => {
   const [movieList, setMovieList] = useState(sampleMovies)
 
-  const handleAddMovie = (title) => {
+  const handleAddMovie = (title, director, actors, plot) => {
 
     const newMovie = {
       Title: title,
+      Director: director,
+      Actors: actors,
+      Plot: plot
       
       // createdDate: new Date().toString()
     }
@@ -520,7 +523,7 @@ const App = () => {
               element: <MoviePage movieList={movieList} handleAddMovie={handleAddMovie} />
             },
             {
-              path: "form",
+              path: "/movies/form",
               element: <MovieFormPage movieList={movieList} handleAddMovie={handleAddMovie}/>
             },
             
