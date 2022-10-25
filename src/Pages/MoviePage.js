@@ -1,53 +1,60 @@
-import { useParams } from "react-router-dom"
-
+import { useParams } from "react-router-dom";
+import Cart from "../Components/Cart";
 
 //const log = console.log.bind(document)
 
 const MoviePage = (props) => {
+  let total = 0;
+  const params = useParams();
 
-    const params = useParams()
-    const paramTitle = params.title
-    const foundMovie = props.movieList.find((movie) => {
+  const paramTitle = params.title;
+  console.log(paramTitle)
+  const foundMovie = props.movieList.find((movie) => {
+    return movie.Title === paramTitle;
+  });
+  console.log(foundMovie)
+  if (foundMovie.Title === paramTitle) {
+    return (
+      <div>
+        <h2>{foundMovie.Title}</h2>
+        {/* <img className="movie-page-image" src={foundMovie.Images[0]} alt="" /> */}
+        <p>Director: {foundMovie.Director}</p>
 
-        return movie.Title === paramTitle
+        <button
+          onClick={(e) => {
+            const addCartTogether = () => {
+              //This is not working
+              //i need to save the state somewhere
+              console.log(foundMovie.Price);
+              total = total + foundMovie.Price;
+              console.log(total);
+            };
+            addCartTogether();
+          }}
+        >
+          Price: ${foundMovie.Price}
+        </button>
 
-    })
+        <p>Actors: {foundMovie.Actors}</p>
+        <p>Plot: {foundMovie.Plot}</p>
+        <p>Coming Soon: {foundMovie.ComingSoon}</p>
+        <p>Year: {foundMovie.Year}</p>
+        <p>Rated: {foundMovie.Rated}</p>
+        <p>Released: {foundMovie.Released}</p>
+        <p>Runtime: {foundMovie.Runtime}</p>
+        <p>Genre: {foundMovie.Genre}</p>
+        <p>Writer: {foundMovie.Writer}</p>
+        <p>Language: {foundMovie.Language}</p>
+        <p>Country: {foundMovie.Country}</p>
+        <p>Awards: {foundMovie.Awards}</p>
+        <p>imdb Rating: {foundMovie.imdbRating}</p>
+        <p>Type: {foundMovie.Type}</p>
+      </div>
+    );
+  }
+};
 
-    if (foundMovie.Title === paramTitle) {
-        return (
-            <div>
-                <h2>{foundMovie.Title}</h2>
-                <img className="movie-page-image" src={foundMovie.Images[0]} alt="" />
-                <p>Director: {foundMovie.Director}</p>
-                <button onClick={(e)=>{
-                    console.log("hi")
-                }}>Price: ${foundMovie.Price}</button>
-                <p>Actors: {foundMovie.Actors}</p>
-                <p>Plot: {foundMovie.Plot}</p>
-                <p>Coming Soon: {foundMovie.ComingSoon}</p>
-                <p>Year: {foundMovie.Year}</p>
-                <p>Rated: {foundMovie.Rated}</p>
-                <p>Released: {foundMovie.Released}</p>
-                <p>Runtime: {foundMovie.Runtime}</p>
-                <p>Genre: {foundMovie.Genre}</p>
-                <p>Writer: {foundMovie.Writer}</p>
-                <p>Language: {foundMovie.Language}</p>
-                <p>Country: {foundMovie.Country}</p>
-                <p>Awards: {foundMovie.Awards}</p>
-                <p>imdb Rating: {foundMovie.imdbRating}</p>
-                <p>Type: {foundMovie.Type}</p>
-              
-                
-
-                
-            </div>
-            
-        )
-    }
-
-}
-
-export default MoviePage
+export default MoviePage;
 
 /*
 const [title, setTitle] = useState('')

@@ -5,8 +5,9 @@ const CartPage = (props) => {
 
     return (
         <div>
-            <h1>Cart</h1>
-            <Cart/>
+            <h1 className="cartpage-text">Under Construction</h1>
+            <Cart />
+            <img src="https://www.peopleready.com/wp-content/uploads/2022/05/CS-0677_TopJobsforAssociatesImages_1000x460_ConstructionWorker.png"/>
         </div>
     )
 

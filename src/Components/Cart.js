@@ -1,12 +1,11 @@
-
+import MoviePage from "../Pages/MoviePage"
 
 const Cart = (props) => {
-
-
+    
     return (
         <div>
-            <h4>Component</h4>
-            
+            <h1></h1>
+
 
         </div>
 

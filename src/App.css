@@ -11,7 +11,6 @@
   justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   color: white;
-
 }
 
 .App-link {
@@ -69,13 +68,17 @@ a:link {
 img {
   border-radius: 20px;
 }
+
 .movie-list-card {
   background-color: #000000;
   border: solid rgb(255, 255, 255);
   border-radius: 30px;
   margin: 20px;
   padding: 10px;
-  
+}
+
+.movie-list-card p {
+  font-size: 20px;
 }
 
 .movie-list {
@@ -103,7 +106,6 @@ img {
   min-height: 260px;
   padding: 2px;
   margin: 2px;
-  
 }
 .movie-card-image2 {
   max-height: 400px;
@@ -111,7 +113,6 @@ img {
   min-height: 260px;
   padding: 2px;
   margin: 2px;
-  
 }
 
 .movie-page-image {
@@ -123,19 +124,15 @@ img {
 }
 
 .movie-sidebar-links:hover {
- 
   background-color: #939393;
   color: #000000;
   font-weight: bold;
   padding-left: 5px;
   border-radius: 5px;
   margin: 10px;
-
-
 }
 
 .movie-sidebar-links:active {
-
   background-color: #fdfb8c;
   color: #000000;
   font-weight: bold;
@@ -147,19 +144,23 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 100px;
 }
 
 .homepage-logo {
   max-width: 800px;
-  
 }
 
 .movie-card-title-button {
-  
   color: white;
   background-color: #000000;
-  
-  
+}
+
+.cartpage-text {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 100px;
 }
