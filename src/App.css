@@ -66,6 +66,9 @@ a:link {
   text-decoration: none;
 }
 
+img {
+  border-radius: 20px;
+}
 .movie-list-card {
   background-color: #000000;
   border: solid rgb(255, 255, 255);
