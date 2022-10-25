@@ -6,7 +6,7 @@ const MovieSidebar = (props) => {
             <h2>Movie Sidebar</h2>
             {props.movieList.map((movieItem, index) => {
                 return (
-                    <Link key={index} to={`/movies/${movieItem.Title}`}>{movieItem.Title}</Link>
+                    <Link className="movie-sidebar-links" key={index} to={`/movies/${movieItem.Title}`}>{movieItem.Title}</Link>
                 )
             })}
         </div>

@@ -11,6 +11,7 @@
   justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   color: white;
+
 }
 
 .App-link {
@@ -35,6 +36,7 @@
   width: 70%;
   border-radius: 20px;
   padding: 25px 20px 30px 20px;
+  text-shadow: #61dafb;
 }
 
 .movie-layout {
@@ -53,18 +55,24 @@
   margin: 10px;
   padding: 20px 20px 20px 20px;
   width: 30%;
+  text-decoration: none;
 }
 
 a {
   color: white;
 }
 
+a:link {
+  text-decoration: none;
+}
+
 .movie-list-card {
   background-color: #000000;
-  border: solid white;
+  border: solid rgb(255, 255, 255);
   border-radius: 30px;
   margin: 20px;
   padding: 10px;
+  
 }
 
 .movie-list {
@@ -84,4 +92,71 @@ a {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.movie-card-image1 {
+  max-height: 400px;
+  max-width: 400px;
+  min-height: 260px;
+  padding: 2px;
+  margin: 2px;
+  
+}
+.movie-card-image2 {
+  max-height: 400px;
+  max-width: 400px;
+  min-height: 260px;
+  padding: 2px;
+  margin: 2px;
+  
+}
+
+.movie-page-image {
+  max-height: 400px;
+  /* max-width: 800px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.movie-sidebar-links:hover {
+ 
+  background-color: #939393;
+  color: #000000;
+  font-weight: bold;
+  padding-left: 5px;
+  border-radius: 5px;
+  margin: 10px;
+
+
+}
+
+.movie-sidebar-links:active {
+
+  background-color: #fdfb8c;
+  color: #000000;
+  font-weight: bold;
+  padding-left: 5px;
+  border-radius: 5px;
+  margin: 10px;
+}
+.homepage-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 100px;
+}
+
+.homepage-logo {
+  max-width: 800px;
+  
+}
+
+.movie-card-title-button {
+  
+  color: white;
+  background-color: #000000;
+  
+  
 }

@@ -112,7 +112,7 @@ const MovieFormPage = (props) => {
             }} />
             <br />
             <input type="text" placeholder="Images" value={image} onChange={(e) => {
-                setImage(e.target.value)
+                setImage()
                 console.log(image)
             }} />
             <br />
@@ -121,6 +121,7 @@ const MovieFormPage = (props) => {
             <br />
             <br />
             <button className="submit-button" onClick={() => {
+                const imagesArr = []
                 handleAddMovie(title, director, actors, plot)
                 console.log("Movie Added")
                 

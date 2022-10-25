@@ -24,7 +24,7 @@ const Logger = (props) => {
                 }}></input>
             <br />
             <input placeholder="password"
-                type="text"
+                type="password"
                 value={props.password}
                 onChange={(event) => {
                     setPassword(event.target.value)
